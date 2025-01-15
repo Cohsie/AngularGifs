@@ -4,8 +4,8 @@
 <hr>
 
   <div class="list-group list-reset">
-    <button class="list-group-item list-group-item-action">
-      Call of Duty
+    <button *ngFor="let nombre of listaEtiquetas" class="list-group-item list-group-item-action">
+      {{ nombre }}
     </button>
   </div>
 </div>

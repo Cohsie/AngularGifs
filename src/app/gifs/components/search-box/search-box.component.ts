@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { ElementRef } from '@angular/core';
+import { GifsService } from '../../services/gifs.service';
+
 
 @Component({
   selector: 'gifs-search-box',
@@ -10,6 +13,9 @@ export class SearchBoxComponent {
   @ViewChild('txtInputEtiqueta')
   public inputEtiqueta!: ElementRef<HTMLInputElement>;
 
+  constructor(private gifsService: GifsService){
+
+  }
 
   buscaEtiqueta() {
     const nuevaEtiqueta = this.inputEtiqueta.nativeElement.value;
