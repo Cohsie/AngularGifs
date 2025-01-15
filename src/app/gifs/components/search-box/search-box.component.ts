@@ -19,7 +19,9 @@ export class SearchBoxComponent {
 
   buscaEtiqueta() {
     const nuevaEtiqueta = this.inputEtiqueta.nativeElement.value;
+    this.gifsService.buscarEtiqueta(nuevaEtiqueta)
     console.log({nuevaEtiqueta});
+    this.inputEtiqueta.nativeElement.value="";
   }
 
 }
