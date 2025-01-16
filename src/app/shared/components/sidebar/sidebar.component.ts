@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { GifsService } from '../../../gifs/services/gifs.service';
 
 @Component({
-  selector: 'shared-sidebar',//Esto ha sido cambiado
+  selector: 'shared-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
@@ -10,6 +10,7 @@ export class SidebarComponent {
   constructor(private GifsService: GifsService){}
 
   get listaEtiquetas(){
-    return this.GifsService.historialEtiquetas;
+    const listaFiltro = this.GifsService.historialEtiquetas.slice(0,10);
+    return listaFiltro;
   }
 }
